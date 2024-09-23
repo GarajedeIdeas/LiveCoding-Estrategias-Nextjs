@@ -1,3 +1,5 @@
+import { BlogGrid } from '@/components/blog/BlogGrid/BlogGrid'
+
 interface Post {
   id: number
   title: string
@@ -13,11 +15,5 @@ export default async function Page() {
   const data = await fetch(BLOG_URL)
   const posts: Post[] = await data.json()
 
-  return (
-    <ul>
-      {posts.map((post) => (
-        <li key={post.id}>{post.title}</li>
-      ))}
-    </ul>
-  )
+  return <BlogGrid posts={posts} />
 }
