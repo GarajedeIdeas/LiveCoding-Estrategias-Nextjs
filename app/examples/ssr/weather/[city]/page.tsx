@@ -12,12 +12,20 @@ interface WeatherData {
     temp: number
     feels_like: number
     humidity: number
+    pressure: number
   }
   weather: Array<{
     main: string
     description: string
   }>
+  wind: {
+    speed: number
+  }
+  sys: {
+    country: string
+  }
   name: string
+  dt: number
 }
 
 interface PageProps {
@@ -26,7 +34,7 @@ interface PageProps {
 
 // Función para obtener los datos del clima
 async function getWeatherData(city: string): Promise<WeatherData> {
-  const apiKey = '8ca4d983133eb131a5990fab52392e85'
+  const apiKey = process.env.API_KEY
 
   const res = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`,
