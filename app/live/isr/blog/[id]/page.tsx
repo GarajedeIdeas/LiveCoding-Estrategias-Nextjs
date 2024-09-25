@@ -1,16 +1,18 @@
-interface Post {
-  id: number
-  title: string
-  content: string
-  author: string
-  date: string
-  category: string
-}
+// interface Post {
+//   id: number
+//   title: string
+//   content: string
+//   author: string
+//   date: string
+//   category: string
+// }
 
 interface PageProps {
   params: { id: string }
 }
 
-export const Page = async ({ params }: PageProps) => {
+export default async function Page({ params }: PageProps) {
+  const { id } = params
+  console.log(id)
   return <main></main>
 }
