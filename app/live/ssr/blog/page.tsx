@@ -12,7 +12,7 @@ interface Post {
 const BLOG_URL = 'https://api.vercel.app/blog'
 
 export default async function Page() {
-  const data = await fetch(BLOG_URL)
+  const data = await fetch(BLOG_URL, { next: { revalidate: 60 } })
   const posts: Post[] = await data.json()
   return (
     <ul>

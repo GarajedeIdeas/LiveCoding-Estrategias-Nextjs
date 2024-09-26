@@ -2,6 +2,12 @@
 
 ---
 
+# Enlace a las slides del live coding
+
+https://docs.google.com/presentation/d/12YNe8LDwICFLbLJderuNIUHkHKNKtWei/edit?usp=sharing&ouid=116915269016875610755&rtpof=true&sd=true
+
+---
+
 ## Introducción
 
 - ¿Qué es el renderizado en desarrollo web?
